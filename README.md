@@ -4,4 +4,4 @@
 
 #### A basic app demonstrating Node and Express with jQuery. Let's find a friend!
 
-### [Find a Friend!](https://conecked.github.io/FriendFinder/)
+### Now on Heroku! [Find a Friend!](https://obscure-bastion-71601.herokuapp.com/)
