@@ -8,7 +8,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.min.css">
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js"></script>
 
 </head>
 <body>
@@ -203,7 +206,7 @@
                     </div>
                     <div class="modal-body">
                       <h2 id="match-name"></h2>
-                      <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+                      <img id="match-img" src="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjsyc7Y5OPcAhXojFQKHR5CCXUQjRx6BAgBEAU&url=https%3A%2F%2Fpeople.com%2Ftv%2Flebron-james-shut-up-dribble-showtime-series%2F&psig=AOvVaw03QP81w4JWcbShfwkLC6i2&ust=1534035220077637" alt="">
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -238,7 +241,8 @@
                 // Capture the form inputs
                 $("#submit").on("click", function(event) {
                   event.preventDefault();
-            
+                    console.log("Got the click");
+                    
                   // Form validation
                   function validateForm() {
                     var isValid = true;
@@ -276,8 +280,13 @@
                         $("#q10").val()
                       ]
                     };
+
+                    // fetch("/api/friends", {
+                    //     method: "POST",
+                    //     body: JSON.stringify(data)
+                    // }).then(response => response.json(userData));
             
-                    // AJAX post the data to the friends API.
+                    // // AJAX post the data to the friends API.
                     $.post("/api/friends", userData, function(data) {
             
                       // Grab the result from the AJAX post so that the best match's name and photo are displayed.
