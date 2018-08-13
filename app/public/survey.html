@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>FriendFinder</title>
 
-    <!-- Latest compiled and minified CSS -->
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -207,7 +207,7 @@
         <br>
         <br>
 
-        <!-- Submit Button -->
+        
         <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
             <i class="fa fa-check-circle" aria-hidden="true"></i>
             Submit</button>
@@ -224,11 +224,9 @@
 
     </div>
 
-    <!-- Modal -->
+    
     <div id="results-modal" class="modal fade" role="dialog">
         <div class="modal-dialog">
-
-            <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -249,7 +247,7 @@
     </div>
 
     <script type="text/javascript">
-        // Chosen CSS
+        // form/Chosen CSS
         var config = {
             ".chosen-select": {},
             ".chosen-select-deselect": {
@@ -275,7 +273,7 @@
             event.preventDefault();
             // console.log("Got the click");
 
-            // Form validation
+            // check to see if the form is filled out
             function validateForm() {
                 var isValid = true;
                 $(".form-control").each(function () {
@@ -293,9 +291,9 @@
                 return isValid;
             }
 
-            // If all required fields are filled
+            // If all questions are answered
             if (validateForm()) {
-                // Create an object for the user"s data
+                
                 var userData = {
                     name: $("#name").val(),
                     photo: $("#photo").val(),
